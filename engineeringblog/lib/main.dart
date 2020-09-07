@@ -1,6 +1,5 @@
+import 'package:engineeringblog/ui/BlogList.dart';
 import 'package:flutter/material.dart';
-import 'package:engineeringblog/articles_list_view.dart';
-
 
 void main() => runApp(new MyApp());
 
@@ -8,11 +7,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Engineering blog',
+      title: 'Eng Blogs',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Latest Engineering Articles'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('The Engineering Blogs'),
+        ),
+        body: Center(
+          child: new BlogList(),
+        ),
+      ),
+      //new BlogList(),
     );
   }
 }

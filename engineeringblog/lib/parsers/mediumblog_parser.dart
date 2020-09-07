@@ -15,7 +15,7 @@ Future<Map<String, String>> fetchMediumArticles(url) async {
     for (var element in elements) {
       var href = element.attributes['href'];
       var articleRegex = RegExp(url + r"\w+-\w+.*");
-      if (articleRegex.hasMatch(href)) {
+      if (articleRegex.hasMatch(href) && element.text.split(' ').length > 2) {
         linkMap.putIfAbsent(element.attributes['href'], () => element.text);
       }
     }

@@ -31,10 +31,17 @@ dependencies:
   html: ^0.14.0+3
   http: 0.12.0+4
   url_launcher: ^5.2.5
+  loading: ^1.0.2
+  flutter_launcher_icons: ^0.7.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/img/icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -48,9 +55,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+      - assets/img/netflix.png
+      - assets/img/twitter.png
+      - assets/img/uber.png
+      - assets/img/airbnb.png
+      - assets/img/criteo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
